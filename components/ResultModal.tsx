@@ -63,7 +63,7 @@ export default function ResultModal({
             🎉🎁🎄
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-2xl mb-2">
-            You&apos;re Secret Santa for...
+            You&#39;re Secret Santa for...
           </h2>
           <p className="text-lg text-white/90">
             Keep this a secret until the party! 🤫
@@ -83,7 +83,7 @@ export default function ResultModal({
             <div className="flex items-start gap-3">
               <span className="text-2xl">🤫</span>
               <p className="text-base md:text-lg font-semibold">
-                Keep it secret! Don&apos;t reveal your assignment until gift exchange on party day.
+                Keep it secret! Don&#39;t reveal your assignment until gift exchange on party day.
               </p>
             </div>
             <div className="flex items-start gap-3">
@@ -108,7 +108,7 @@ export default function ResultModal({
                    rounded-full shadow-xl hover:bg-yellow-500 active:scale-95 
                    transition-all duration-200 border-2 border-white/50"
         >
-          Got it! I&apos;ll keep it secret 🎄
+          Got it! I&#39;ll keep it secret 🎄
         </button>
       </div>
     </div>
