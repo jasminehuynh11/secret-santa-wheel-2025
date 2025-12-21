@@ -99,7 +99,7 @@ export default function ResultPage() {
         <div className="mb-8 bg-christmas-gold/20 backdrop-blur-md rounded-2xl p-6 
                       border-2 border-christmas-gold/50 max-w-2xl mx-auto">
           <p className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg">
-            🎉 You&#39;re preparing a gift for... 🎉
+            🎉 You{'\''}re preparing a gift for... 🎉
           </p>
         </div>
 
