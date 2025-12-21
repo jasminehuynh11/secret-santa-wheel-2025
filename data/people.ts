@@ -42,7 +42,7 @@ export const people: Person[] = [
     aliases: [],
     gender: 'male',
     starSign: 'Aquarius',
-    hint: 'he likes ...',
+    hint: 'He likes dog related products (toy, treat), stuffs could make his dog happy',
     avatar: '👨',
   },
   {

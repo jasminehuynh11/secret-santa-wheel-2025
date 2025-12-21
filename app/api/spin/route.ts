@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { assignRandomRecipient, hasSpun } from '@/lib/assignments';
+import { assignFixedRecipient, hasSpun, getAssignment } from '@/lib/assignments';
 import { getPersonById, getPersonByName } from '@/data/people';
 
 export async function POST(request: NextRequest) {
@@ -23,20 +23,52 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check if already spun
+    // Check if already spun - if so, return their fixed assignment
     if (hasSpun(spinner.id)) {
-      return NextResponse.json(
-        { 
-          error: 'You have already spun the wheel',
-          alreadyAssigned: true,
-          spinnerId: spinner.id,
+      const recipientId = getAssignment(spinner.id);
+      if (!recipientId) {
+        return NextResponse.json(
+          { 
+            error: 'You have already spun the wheel, but assignment not found',
+            alreadyAssigned: true,
+            spinnerId: spinner.id,
+          },
+          { status: 400 }
+        );
+      }
+      
+      const recipient = getPersonById(recipientId);
+      if (!recipient) {
+        return NextResponse.json(
+          { 
+            error: 'You have already spun the wheel, but recipient information not found',
+            alreadyAssigned: true,
+            spinnerId: spinner.id,
+          },
+          { status: 500 }
+        );
+      }
+
+      // Return recipient information for already-spun user
+      return NextResponse.json({
+        success: true,
+        alreadyAssigned: true,
+        spinnerId: spinner.id,
+        spinnerName: spinner.name,
+        recipient: {
+          id: recipient.id,
+          name: recipient.name,
+          aliases: recipient.aliases,
+          gender: recipient.gender,
+          starSign: recipient.starSign,
+          hint: recipient.hint,
+          avatar: recipient.avatar,
         },
-        { status: 400 }
-      );
+      });
     }
 
-    // Assign random recipient
-    const recipientId = assignRandomRecipient(spinner.id);
+    // Assign fixed recipient
+    const recipientId = assignFixedRecipient(spinner.id);
     const recipient = getPersonById(recipientId);
 
     if (!recipient) {
