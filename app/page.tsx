@@ -13,7 +13,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [resultRecipient, setResultRecipient] = useState<Person | null>(null);
 
-  const partyDate = '05:00 PM Sunday 28/12/2025 at Khánh{\'\''}s house';
+  const partyDate = "05:00 PM Sunday 28/12/2025 at Khánh's house";
   const giftBudget = '$30';
 
   const handleSpin = async () => {
@@ -122,7 +122,7 @@ export default function Home() {
               <div className="flex items-start gap-3 md:gap-4">
                 <span className="text-2xl md:text-3xl flex-shrink-0">🎡</span>
                 <p className="text-base md:text-lg">
-                  <span className="font-semibold">Spin the wheel</span> to find out who you{'\''}re getting a gift for!
+                  <span className="font-semibold">Spin the wheel</span> to find out who you&apos;re getting a gift for!
                 </p>
               </div>
               <div className="flex items-start gap-3 md:gap-4">
@@ -140,7 +140,7 @@ export default function Home() {
               <div className="flex items-start gap-3 md:gap-4">
                 <span className="text-2xl md:text-3xl flex-shrink-0">💡</span>
                 <p className="text-base md:text-lg">
-                  <span className="font-semibold">Hints:</span> The hint of each person{'\''}s preference is below. Use these to guide your gift selection!
+                  <span className="font-semibold">Hints:</span> The hint of each person&apos;s preference is below. Use these to guide your gift selection!
                 </p>
               </div>
             </div>
@@ -188,7 +188,7 @@ export default function Home() {
           <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-6 md:p-8 lg:p-10 
                         border-2 border-white/30 shadow-xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">
-              Everyone{'\''}s Preferences & Hints
+              Everyone&apos;s Preferences & Hints
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {people.map((person) => {
