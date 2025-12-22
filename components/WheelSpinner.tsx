@@ -13,14 +13,14 @@ export default function WheelSpinner({ isSpinning }: WheelSpinnerProps) {
   const segments = people;
   const segmentAngle = 360 / segments.length;
   
-  // Colors for each segment
+  // Luxury Christmas colors for each segment
   const segmentColors = [
-    '#DC2626', // red
-    '#16A34A', // green
-    '#EAB308', // gold
-    '#3B82F6', // blue
-    '#8B5CF6', // purple
-    '#EC4899', // pink
+    '#8B2635', // deep burgundy red
+    '#1B4332', // hunter green
+    '#D4AF37', // warm gold
+    '#722F37', // darker burgundy
+    '#2D5016', // forest green
+    '#C9A961', // softer gold
   ];
 
   useEffect(() => {
@@ -100,14 +100,24 @@ export default function WheelSpinner({ isSpinning }: WheelSpinnerProps) {
           return (
             <div
               key={person.id}
-              className="absolute text-white font-bold text-sm drop-shadow-lg whitespace-nowrap"
+              className="absolute text-white font-bold text-base md:text-lg whitespace-nowrap"
               style={{
                 left: `calc(50% + ${x}px)`,
                 top: `calc(50% + ${y}px)`,
                 transform: 'translate(-50%, -50%)',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.9), -1px -1px 2px rgba(0,0,0,0.9), 1px 1px 2px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.8)',
+                WebkitTextStroke: '0.5px rgba(0,0,0,0.5)',
               }}
             >
-              {person.name}
+              <span 
+                className="px-2 py-1 rounded-md"
+                style={{
+                  backgroundColor: 'rgba(0,0,0,0.4)',
+                  backdropFilter: 'blur(4px)',
+                }}
+              >
+                {person.name}
+              </span>
             </div>
           );
         })}

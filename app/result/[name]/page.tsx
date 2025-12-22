@@ -50,7 +50,7 @@ export default function ResultPage() {
     }
   }, [spinnerId]);
 
-  const partyDate = '05:00pm Sunday 28/12/2025';
+  const partyDate = '05:00 PM Sunday 28/12/2025 at N305/2 Lardelli Drive, Ryde, NSW';
 
   if (loading) {
     return (

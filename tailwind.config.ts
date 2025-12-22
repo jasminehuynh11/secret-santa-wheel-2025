@@ -10,10 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         christmas: {
-          red: '#DC2626',
-          green: '#16A34A',
-          gold: '#EAB308',
+          red: '#8B2635',
+          green: '#1B4332',
+          gold: '#D4AF37',
+          cream: '#FFF8E7',
           white: '#FFFFFF',
+          navy: '#1e3a5f',
         },
       },
       animation: {

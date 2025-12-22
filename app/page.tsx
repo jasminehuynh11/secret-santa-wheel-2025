@@ -13,7 +13,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [resultRecipient, setResultRecipient] = useState<Person | null>(null);
 
-  const partyDate = "05:00 PM Sunday 28/12/2025 at Khánh's house";
+  const partyDate = "05:00 PM Sunday 28/12/2025 at N305/2 Lardelli Drive, Ryde, NSW";
   const giftBudget = '$30';
 
   const handleSpin = async () => {
@@ -105,10 +105,21 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-6 drop-shadow-lg">
               Happy New Year 2026! 🎉
             </h2>
+            {/* Quote Section */}
+            <div className="mb-6 md:mb-8 max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl lg:text-2xl font-medium text-christmas-cream italic 
+                          bg-white/15 backdrop-blur-sm rounded-2xl px-6 md:px-8 py-4 md:py-5 
+                          border-2 border-white/30 shadow-lg">
+                &quot;Let&apos;s gather for a cozy and warm dinner night filled with laughter and good food.&quot;
+              </p>
+            </div>
             <div className="text-lg md:text-xl lg:text-2xl font-medium bg-white/20 backdrop-blur-sm 
                           rounded-full px-4 md:px-6 py-2 md:py-3 inline-block border-2 border-white/30 
-                          shadow-lg">
+                          shadow-lg mb-3">
               🎊 Party Time: {partyDate} 🎊
+            </div>
+            <div className="text-base md:text-lg font-medium text-christmas-cream mb-4">
+              Please come at 4:00pm for cooking and preparation
             </div>
           </div>
 
@@ -143,6 +154,19 @@ export default function Home() {
                   <span className="font-semibold">Hints:</span> The hint of each person&apos;s preference is below. Use these to guide your gift selection!
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Notes Section */}
+          <div className="bg-christmas-cream/20 backdrop-blur-md rounded-2xl p-6 md:p-8 mb-8 md:mb-10 
+                        border-2 border-christmas-gold/50 shadow-xl max-w-4xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center text-christmas-cream">
+              📝 Notes
+            </h3>
+            <div className="bg-white/30 rounded-xl p-4 md:p-6 border-2 border-white/40">
+              <p className="text-base md:text-lg text-left leading-relaxed">
+                Please select your name from the dropdown. The result of your first spin is final and will be saved. Spinning again will not change your assigned Secret Santa.
+              </p>
             </div>
           </div>
 
@@ -226,6 +250,13 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="w-full py-6 md:py-8 text-center relative z-10">
+        <div className="text-base md:text-lg font-medium text-christmas-cream/90">
+          @madebyJasmine12-2025
+        </div>
+      </footer>
 
       {/* Result Modal */}
       <ResultModal
