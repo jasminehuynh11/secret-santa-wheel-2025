@@ -16,7 +16,6 @@
 /build
 
 # misc
-.DS_Store
 *.pem
 
 # debug
@@ -33,4 +32,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
 
